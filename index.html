@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bookshelf Apps</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="head_bar">
+    <h1 class="head_bar__title">Bookshelf Apps</h1>
+</header>
+<main>
+    <section class="input_section">
+        <div class="card">
+            <h2>Masukkan Buku Baru</h2>
+            <form id="inputBook">
+                <div class="input">
+                    <label for="inputBookTitle">Judul</label>
+                    <input id="inputBookTitle" type="text" placeholder="Judul Buku" required>
+                </div>
+                <div class="input">
+                    <label for="inputBookAuthor">Penulis</label>
+                    <input id="inputBookAuthor" type="text" placeholder="Penulis Buku" required>
+                </div>
+                <div class="input">
+                    <label for="inputBookYear">Tahun</label>
+                    <input id="inputBookYear" type="number" placeholder="Tahun" required>
+                </div>
+                <div class="status-detail">
+                    <input type="radio" value="read" name="value" id="dot-1">
+                    <input type="radio" value="unread" name="value" id="dot-2">
+                    <span class="status-title">Status</span>
+                    <div class="value">
+                        <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="status">sudah selesai dibaca</span>
+                        </label>
+                        <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="status">belum selesai dibaca</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="button">
+                    <input id="bookSubmit" type="submit" value="Masukan Buku ke Rak">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="search_section">
+        <div class="card">
+            <h2>Cari Buku</h2>
+            <form id="searchBook">
+                <div class="input">
+                    <label for="searchBookTitle">Judul</label>
+                    <input id="searchBookTitle" type="text" placeholder="Judul Buku" required>
+                </div>
+                <div class="button">
+                    <input id="searchSubmit" type="submit" value="Cari">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="book_shelf">
+        <div class="card">
+            <h2>Belum selesai dibaca</h2>
+            <div id="incompleteBookshelfList" class="book_list">
+            </div>
+        </div>
+    </section>
+
+    <section class="book_shelf">
+        <div class="card">
+            <h2>Selesai dibaca</h2>
+            <div id="completeBookshelfList" class="book_list">
+            </div>
+        </div>
+    </section>
+</main>
+<script src="js/data.js" type="text/javascript"></script>
+<script src="js/dom.js" type="text/javascript"></script>
+<script src="js/script.js" type="text/javascript"></script>
+</body>
+</html>

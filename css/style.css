@@ -1,0 +1,199 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  background: linear-gradient(to right, #ef32d9, #89fffd);
+}
+body,
+input,
+button {
+  font-family: "Open Sans", sans-serif;
+}
+
+input,
+button {
+  font-size: 16px;
+}
+
+.head_bar {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+main {
+  max-width: 800px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 16px;
+}
+.card {
+  border-radius: 18px;
+  max-width: 800px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 30px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+.card h2 {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.card h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 60px;
+  background: linear-gradient(to right, #ef32d9, #89fffd);
+}
+#inputBook,
+#searchBook {
+  width: 100%;
+}
+form .input {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+form .input label {
+  width: 100px;
+  margin-right: 10px;
+  font-size: 18px;
+}
+form .input input {
+  height: 35px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 18px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+form .input input:focus,
+form .input input:valid {
+  border-color: #bc99eb;
+}
+.status-detail .status-title {
+  font-size: 26px;
+  font-weight: 500;
+}
+.status-detail .value {
+  display: flex;
+  width: 80%;
+  margin: 14px 0;
+  justify-content: space-between;
+}
+.status-detail .value label {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+.status-detail .value .dot {
+  height: 18px;
+  width: 18px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+#dot-1:checked ~ .value label .one,
+#dot-2:checked ~ .value label .two {
+  border-color: #d9d9d9;
+  background: #bc99eb;
+}
+form input[type="radio"] {
+  display: none;
+}
+form .button {
+  height: 45px;
+  margin: 20px 0;
+}
+form .button input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  background: linear-gradient(to right, #ef32d9, #89fffd);
+}
+form .button input:hover {
+  background: linear-gradient(to left, #ef32d9, #89fffd);
+}
+.book_item {
+  border-radius: 16px;
+  margin-top: 16px;
+  padding: 12px 24px 12px 24px;
+  display: flex;
+  flex-direction: row;
+  background: white;
+  align-items: center;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.1),
+    0 15px 40px rgba(166, 173, 201, 0.4);
+}
+.book_item .text_item {
+  display: flex;
+  flex-direction: column;
+}
+.book_item:hover {
+  transform: scale(1.05);
+  background: #bc99eb;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.2),
+    0 15px 40px rgba(166, 173, 201, 0.5);
+  color: #fff;
+}
+
+.read-button {
+  background: url("../assets/menu.svg");
+  filter: invert(69%) sepia(47%) saturate(2879%) hue-rotate(211deg)
+    brightness(106%) contrast(84%);
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  cursor: pointer;
+  border: none;
+}
+.trash-button {
+  background: url("../assets/delete.svg");
+  filter: invert(69%) sepia(47%) saturate(2879%) hue-rotate(211deg)
+    brightness(106%) contrast(84%);
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+}
+.undo-button {
+  background: url("../assets/undo.svg");
+  filter: invert(69%) sepia(47%) saturate(2879%) hue-rotate(211deg)
+    brightness(106%) contrast(84%);
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  cursor: pointer;
+  border: none;
+}
+.book_item:hover .trash-button,
+.book_item:hover .undo-button,
+.book_item:hover .read-button {
+  filter: invert(100%) sepia(0%) saturate(7445%) hue-rotate(352deg)
+    brightness(93%) contrast(107%);
+}
